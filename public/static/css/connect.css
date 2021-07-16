@@ -1,0 +1,37 @@
+body{
+    background-color: #f6f6f6;
+    margin: 0px;
+}
+
+.mtop16 {
+    margin-top: 16px;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #d6d6d6;
+    position: absolute;  
+    padding: 16px;
+    width: 410px;     
+}
+
+.btn-success{
+    width: 100%;
+    border: 0px;
+}
+
+
+.input-group-text{
+    display: block;
+}
+      
+
+.box_login {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+    
