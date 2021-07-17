@@ -1,5 +1,6 @@
 body{
     background-color: #f6f6f6;
+    font-size: 16px;
     margin: 0px;
 }
 
@@ -17,14 +18,41 @@ body{
 }
 
 .btn-success{
+    background-color: #9c34f1;
     width: 100%;
     border: 0px;
 }
 
+.form-control:focus, :active{
+    outline: none;
+    box-shadow: none;
+}
 
 .input-group-text{
     display: block;
 }
+
+
+
+.header{
+    background-color: #9c34f1;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.img{
+    padding: 16px;
+    display: block;
+    margin: 0px auto;
+    width: 36%;
+}
+
+.footer{
+    text-align: center;
+    display: block;
+    font-size: .8em;      
+}
+
+
       
 
 .box_login {
