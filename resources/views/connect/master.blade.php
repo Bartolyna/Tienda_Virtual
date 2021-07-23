@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{url('/static/css/connect.css?v='.time())}}">
     <!-- Kit de Fonts -->
     <script src="https://kit.fontawesome.com/ee212b47c6.js" crossorigin="anonymous"></script>
+    <!-- Libreria de JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MyCms - @yield('title')</title>
@@ -19,6 +21,7 @@
     @section('content')
         
     @show
+    
     
 </body>
 </html>

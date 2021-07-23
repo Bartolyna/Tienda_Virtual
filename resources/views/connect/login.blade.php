@@ -35,6 +35,26 @@
 
         {!! Form::submit('Ingresar', ['class' => 'btn btn-success mtop16']) !!}   
         {!! Form::close() !!}
+
+        <!-- Mensaje de alerta de errores -->
+        @if(Session::has('message'))
+            <div class="container mtop16">
+                <div class="alert alert-success" style="display:none;">
+                    {{ Session::get('message') }}
+                    @if ($errors->any())
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                            <li>{{$error}}</li> 
+                            @endforeach
+                        </ul>  
+                    @endif
+                    <script>
+                        $('.alert').slideDown();
+                        setTimeout( function() {$('.alert').slideUp();}, 15000);
+                    </script>
+                </div>
+            </div>        
+        @endif
     
         <div class="footer mtop16">
             <a href="{{ url('/register') }}">¿No tienes cuenta?, Registrate</a>
