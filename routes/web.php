@@ -18,9 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 // Router Auth
 Route::get('/login', [ConnectController::class, 'getLogin']);
 Route::post('/login', [ConnectController::class, 'postLogin']);
 Route::get('/register', [ConnectController::class, 'getRegister']);
 Route::post('/register', [ConnectController::class, 'postRegister']);
 Route::get('/logout', [ConnectController::class, 'getLogout']);
+
+
