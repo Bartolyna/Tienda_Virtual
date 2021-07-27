@@ -39,7 +39,7 @@
         <!-- Mensaje de alerta de errores -->
         @if(Session::has('message'))
             <div class="container mtop16">
-                <div class="alert alert-success" style="display:none;">
+                <div class="alert alert-{{ Session::get('typealert') }}" style="display:none;">
                     {{ Session::get('message') }}
                     @if ($errors->any())
                         <ul>

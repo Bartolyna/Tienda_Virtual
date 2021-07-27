@@ -50,7 +50,7 @@
         </div>
 
         <!-- Campo de confirmar Password -->
-        <label for="rpassword" class="mtop16">Repita contraseña: </label>
+        <label for="rpassword" class="mtop16">Repetir contraseña: </label>
         <div class="input-group">
             <div class="input-group-prepend">
                 <div class="input-group-text"><i class="fas fa-key"></i></div>
@@ -63,8 +63,8 @@
 
         <!-- Mensaje de alerta de errores -->
         @if(Session::has('message'))
-            <div class="container">
-                <div class="alert alert-danger" style="display:none;">
+            <div class="container mtop16">
+                <div class="alert alert-{{ Session::get('typealert') }}" style="display:none;">
                     {{ Session::get('message') }}
                     @if ($errors->any())
                         <ul>
