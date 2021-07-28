@@ -1,10 +1,14 @@
 <?php  
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\DashboardController;
 
 
-Route::get('/admin', function () {
-    return 'Holaa';
+// El prefijo que llevara antes, durante toda las rutas
+Route::prefix('/admin')->group( function () {
+   
+    Route::get('/', [DashboardController::class, 'getDashboard']);
+
 });
 
 ?>
