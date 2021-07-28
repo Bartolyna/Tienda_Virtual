@@ -14,6 +14,10 @@
     <script src="https://kit.fontawesome.com/ee212b47c6.js" crossorigin="anonymous"></script>
     <!-- Libreria de JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Libreria de CKEDITORS -->
+    <script src="{{ url('/static/libs/ckeditor/ckeditor.js')}}"></script>
+    <!-- Libreria de CKEDITORS JS -->
+    <script src="{{ url('/static/js/admin.js')}}"></script>
 
     <!-- Titulo  -->
     <title>@yield('title') - MyCms</title>
