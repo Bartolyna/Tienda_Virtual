@@ -37,7 +37,7 @@
                         <td>{{$user->lastname}}</td>
                         <td>{{$user->email}}</td>
                         <td>
-                            <div class="opts">
+                        <div class="opts">
                             <a href="{{ url('/admin/users/'.$user->id.'/edit')}}" data.toggle="tooltip" data-bs-placement="top" title="Editar">
                                 <i class="fas fa-user-edit"></i>
                             </a>

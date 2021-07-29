@@ -132,4 +132,19 @@ h2.title{
     border: 1px solid #dedede;
     display: inline-block;
     padding: 8px 10px;
+    
+}
+
+.nav .nav-link{
+    border: 1px solid #c8a6df;
+    margin-right: 8px;
+}
+
+.nav a{
+    color: rgb(44, 0, 44) !important;
+}
+
+.nav .nav-link:hover{
+    background-color: #c8a6df;
+    color: #fff;
 }

@@ -48,6 +48,54 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-md-8">
+            <div class="panel shadow">
+                <div class="header">
+                    <h2 class="title"><i class="fas fa-folder-open"></i>Categorias</h2>
+                </div>
+        
+                <div class="inside">
+
+                    <nav class="nav nav-pills nav-fill">
+                        @foreach (getModuleArray() as $m => $i)
+                            <a href="{{ url('/admin/categories/'.$m)}}" class="nav-link"><i class="fas fa-list"></i>{{$i}}</a>
+                        @endforeach
+                    </nav>
+
+                <table class="table mtop16">
+                    
+                    <thead>
+                        <tr>  
+                            <td width="15"></td>                       
+                            <td>Nombre</td>
+                            <td>Editar/Eliminar</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach ($cats as $cat)
+                        <tr>
+                            <td>{!! htmlspecialchars_decode($cat->icon) !!}</td>
+                            <td>{{$cat->name}}</td>
+                            <td>
+                                <div class="opts" >
+                                    <a href="{{ url('/admin/category/'.$cat->id.'/edit')}}" data.toggle="tooltip" data-bs-placement="top" title="Editar">
+                                        <i class="far fa-edit"></i>
+                                    </a>
+                                    <a href="{{ url('/admin/category/'.$cat->id.'/delete')}}" data.toggle="tooltip" data-bs-placement="top" title="Eliminar">
+                                        <i class="fas fa-minus-square"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody> 
+                </table> 
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

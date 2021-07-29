@@ -20,7 +20,7 @@ Route::prefix('/admin')->group( function () {
     Route::get('/products/add', [ProductsController::class, 'getProductAdd']);
 
     //Routes Categories
-    Route::get('/categories', [CategoriesController::class, 'getHome']);
+    Route::get('/categories/{module}', [CategoriesController::class, 'getHome']);
     Route::post('/category/add', [CategoriesController::class, 'postCategoryAdd']);
 });
 

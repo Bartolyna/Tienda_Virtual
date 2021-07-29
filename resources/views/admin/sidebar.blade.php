@@ -24,7 +24,7 @@
                 <a href="{{ url('/admin')}}" class="nav-link"><i class="fas fa-home"></i>Dashboard</a>
             </li>
             <li>
-                <a href="{{ url('/admin/categories')}}" class="nav-link"><i class="fas fa-folder-open"></i>Categorias</a>
+                <a href="{{ url('/admin/categories/0')}}" class="nav-link"><i class="fas fa-folder-open"></i>Categorias</a>
             </li>
             <li>
                 <a href="{{ url('/admin/products')}}" class="nav-link"><i class="fas fa-boxes"></i>Productos</a>
