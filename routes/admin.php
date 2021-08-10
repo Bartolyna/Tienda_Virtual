@@ -22,6 +22,10 @@ Route::prefix('/admin')->group( function () {
     //Routes Categories
     Route::get('/categories/{module}', [CategoriesController::class, 'getHome']);
     Route::post('/category/add', [CategoriesController::class, 'postCategoryAdd']);
+    Route::get('/category/{id}/edit', [CategoriesController::class, 'getCategoryEdit']);
+    Route::post('/category/{id}/edit', [CategoriesController::class, 'postCategoryEdit']);
+    Route::get('/category/{id}/delete', [CategoriesController::class, 'getCategoryDelete']);
+
 });
 
 ?>

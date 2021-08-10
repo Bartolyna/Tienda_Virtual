@@ -101,6 +101,8 @@ img{
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
+
+
 .breadcrumb-item a:hover{
     text-decoration: none !important;   
 }
@@ -132,7 +134,7 @@ h2.title{
     border: 1px solid #dedede;
     display: inline-block;
     padding: 8px 10px;
-    
+    color: rgb(44, 0, 44);
 }
 
 .nav .nav-link{
