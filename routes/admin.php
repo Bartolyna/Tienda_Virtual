@@ -18,6 +18,8 @@ Route::prefix('/admin')->group( function () {
     //Routes Products
     Route::get('/products', [ProductsController::class, 'getHome']);
     Route::get('/products/add', [ProductsController::class, 'getProductAdd']);
+    Route::post('/products/add', [ProductsController::class, 'postProductAdd']);
+
 
     //Routes Categories
     Route::get('/categories/{module}', [CategoriesController::class, 'getHome']);

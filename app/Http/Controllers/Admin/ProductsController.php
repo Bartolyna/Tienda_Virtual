@@ -4,6 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Product;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+
+
 
 class ProductsController extends Controller
 {
@@ -17,6 +23,53 @@ class ProductsController extends Controller
     }
 
     public function getProductAdd(){
-        return view('admin.products.add');
+        $cats = Category::where('module', '0')->pluck('name', 'id');
+        $data = ['cats' => $cats];
+        return view('admin.products.add',  $data);
+    }
+
+    public function postProductAdd(Request $request){
+        $rules = [
+            'name' => 'required',
+            'img' => 'required',
+            'price' => 'required',
+            'content' => 'required'
+        ];
+
+        $messages = [
+            'name.required' => 'El nombre del producto es requerido',
+            'img.required' => 'Seleccione una imagen destacada',
+            'img.image' => 'El archivo no es una imagen',
+            'price.required' => 'Ingrese el precio del producto',
+            'content.required' => 'Ingrese un descripcion del producto'
+        ];
+
+        $validator = Validator::make( $request->all(), $rules, $messages);
+
+        if($validator->fails()){
+
+            return back()->withErrors($validator)->with('message', 'Se ha producido un error')
+                ->with('typealert', 'danger')->withInput();
+
+        }else{
+
+            $product = new Product();
+            $product->status = '0';
+            $product->name = e($request->input('name'));
+            $product->slug = Str::slug($request->input('name'));
+            $product->category_id = $request->input('category');
+            $product->image = "image.png";
+            $product->price =$request->input('price');
+            $product->in_discount = $request->input('indiscount');
+            $product->discount = $request->input('discount');
+            $product->content = e($request->input('content'));
+
+            if($product->save()){
+
+                return redirect('/admin/products')->with('message', 'Guardado con exito')->with('typealert', 'success');
+    
+            }
+
+        }
     }
 }

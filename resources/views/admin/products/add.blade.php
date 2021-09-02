@@ -38,7 +38,11 @@
                 </div>
 
                 <div class="col-md-2">
-                    <label for="name">Categorìa:</label>
+                    <label for="category">Categorìa:</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-file-alt"></i></span>
+                        {!! Form::select('category',$cats, 0, ['class' => 'form-select']) !!}
+                    </div>
                 </div>
 
                 <div class="col-md-5">
